@@ -35,7 +35,7 @@ await fetcher.load(person);</pre>
 <p>The ontologies we use within our project define a standard way of referencing resources within the Semantic Web. They are useful because they allow data exchange between web applications using a shared vocabulary. An Instead of inventing vocabulary for our use, we can mostly use vocabularies or ontologies that already exist. If I would like to add a friend to my webId-profile I can use the FOAF ontology (Friend of a Friend) to build a triple:</p>
 <pre>&lthttps://ludwigschubert.solid.community/profile/card#me> &lthttp://xmlns.com/foaf/0.1/knows> &lthttps://malte18.solid.community/profile/card#me>.</pre>
 <p>Or an abbreviated version using a prefix:</p>
-<pre>@prefix foaf: &lthttp://xmlns.com/foaf/0.1/knows>.
+<pre>@prefix foaf: &lthttp://xmlns.com/foaf/0.1/>.
 &lthttps://ludwigschubert.solid.community/profile/card#me> &ltfoaf:knows> &lthttps://malte18.solid.community/profile/card#me>.</pre>
 <p>I could then insert this triple into my webId with SPARQL for example. There are thousands of ontologies out there for all kinds of different purposes. Here's a slightly more complex example using the ldp ontology (Linked Data Platform), that indicates where my inbox can be found:</p>
 <pre>@prefix : &lt#>.
