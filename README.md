@@ -73,6 +73,19 @@ pro:card a n0:PersonalProfileDocument; n0:maker :me; n0:primaryTopic :me.
     solid:publicTypeIndex &lt/settings/publicTypeIndex.ttl>;
     n0:name "Ludwig Schubert".
 </pre></li>
+<h2>.acl Basics:</h2>
+<p>Every folder in a users pod contains a hidden .acl file, which specifies the which data a user is allowed to access. To express the permissions for a user group "friends", one would have to write the following Turtle triples:</p>
+<pre>:friend
+    a acl:Authorization;
+    acl:accessTo <prefs.ttl>;
+    acl:agent https://exampleuser.solid.community/profile/card#me;
+    acl:mode acl:Read.</pre>
+<p>With an access control file looking like this, the user exampleuser would have access to prefs.ttl, but would be restricted to reading it. These are the minimally required triples for an .acl file:</p>
+<li>A triple specifying the file to be an Acl file:<pre>:friend a acl:Authorization</pre></li>
+<li>A triple specifying the files that this User group has access to:<pre>:friend acl:agent &ltwebId></pre></li>
+<li>A triple specifying who belongs to the User Group:<pre>:friend acl:accessTo &ltprefs.ttl></pre></li>
+<li>A triple specifying what kind of access users from this particular group have:<pre>:friend acl:mode acl:Read</pre>.</li>
+
 <p>---------------------------------HAVE TO'S--------------------------------</p>
 <p>+    Add .acl basic</p>
 </html>
