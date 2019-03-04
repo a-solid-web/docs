@@ -87,5 +87,7 @@ pro:card a n0:PersonalProfileDocument; n0:maker :me; n0:primaryTopic :me.
 <li>A triple specifying what kind of access users from this particular group have:<pre>:friend acl:mode acl:Read</pre>.</li>
 
 <p>---------------------------------HAVE TO'S--------------------------------</p>
-<p>+    Add .acl basic</p>
+<p>+    Add UpdateManager documentation</p>
+<p>+    Add LDP documentation</p>
+<p>+    Add Knowledge Graph documentation</p>
 </html>
