@@ -82,8 +82,8 @@ pro:card a n0:PersonalProfileDocument; n0:maker :me; n0:primaryTopic :me.
     acl:mode acl:Read.</pre>
 <p>With an access control file looking like this, the user exampleuser would have access to prefs.ttl, but would be restricted to reading it. These are the minimally required triples for an .acl file:</p>
 <li>A triple specifying the file to be an Acl file:<pre>:friend a acl:Authorization</pre></li>
-<li>A triple specifying the files that this User group has access to:<pre>:friend acl:agent &ltwebId></pre></li>
-<li>A triple specifying who belongs to the User Group:<pre>:friend acl:accessTo &ltprefs.ttl></pre></li>
+<li>A triple specifying who belongs to the User Group:<pre>:friend acl:agent &ltwebId></pre></li>
+<li>A triple specifying the files that this User group has access to:<pre>:friend acl:accessTo &ltprefs.ttl></pre></li>
 <li>A triple specifying what kind of access users from this particular group have:<pre>:friend acl:mode acl:Read</pre>.</li>
 
 <p>---------------------------------HAVE TO'S--------------------------------</p>
